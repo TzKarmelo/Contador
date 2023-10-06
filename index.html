@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador</title>
+    <style>
+      #contador, .botones {
+        font-size: 24px;
+        text-align: center;
+      }
+      #boton-incrementar,
+      #boton-decrementar {
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contador">0</div>
+    <div class="botones">
+      <button id="boton-incrementar">Incrementar</button>
+      <button id="boton-decrementar">Decrementar</button>
+    </div>
+    <script>
+      var contador = document.getElementById("contador");
+      var botonIncrementar = document.getElementById("boton-incrementar");
+      var botonDecrementar = document.getElementById("boton-decrementar");
+
+      var valorContador = 0;
+
+      function incrementarContador() {
+        valorContador++;
+        contador.innerHTML = valorContador;
+      }
+
+      function decrementarContador() {
+        valorContador--;
+        contador.innerHTML = valorContador;
+      }
+
+      botonIncrementar.addEventListener("click", incrementarContador);
+      botonDecrementar.addEventListener("click", decrementarContador);
+
+    </script>
+  </body>
+</html>
